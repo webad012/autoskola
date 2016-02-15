@@ -52,6 +52,21 @@ var Controller = function () {
                 window.scrollTo(0, 0);
                 $('#back_button').on('click', self.renderMainMenu);
                 
+                var fully_covered_sections = questionManager.getFullyCoveredSections();
+                var added_sections_main_ul = $('#added_sections_main_ul');
+                for(var i=0; i<fully_covered_sections.length; i++)
+                {
+                    var section_li = $('<li>'+fully_covered_sections[i].name+'</li>');
+                    var subsection_ul = $('<ul></ul>');
+                    for(var j=0; j<fully_covered_sections[i].subsections.length; j++)
+                    {
+                        var subsection_li = $('<li>'+fully_covered_sections[i].subsections[j].name+'</li>');
+                        subsection_ul.append(subsection_li);
+                    }
+                    section_li.append(subsection_ul);
+                    added_sections_main_ul.append(section_li);
+                }
+                
                 ddtreemenu.createTree("added_sections");
             });
         },

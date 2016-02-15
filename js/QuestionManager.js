@@ -40,6 +40,48 @@ var QuestionManager = function() {
             question.code = code;
             shuffle(question.answers);
             return question;
+        },
+        getFullyCoveredSections: function()
+        {
+            var result = [];
+            
+            for(var i=0; i<questions.length; i++)
+            {
+//                var section = questions[i];
+                var fully_covered_subsections = [];
+                
+//                console.log('getFullyCoveredSections - 0 - '+section.length);
+//                console.log('getFullyCoveredSections - 0 - '+questions[i]);
+//                console.log('getFullyCoveredSections - 0 - '+questions[i].name);
+//                console.log('getFullyCoveredSections - 0 - '+questions[i].length);
+                
+                for(var j=0; j<questions[i].questions.length; j++)
+                {
+//                    var subsection = questions[i][j];
+//                    console.log('getFullyCoveredSections - 1 - '+questions[i].questions[j].questions.length);
+//                    console.log('getFullyCoveredSections - 2 - '+questions[i].questions[j].total_number_of_questions);
+                    if(questions[i].questions[j].questions.length === questions[i].questions[j].total_number_of_questions)
+                    {
+                        fully_covered_subsections.push({
+                            name: questions[i].questions[j].name,
+                            index: j
+                        });
+                    }
+                }
+                
+//                console.log(fully_covered_subsections);
+                
+                if(fully_covered_subsections.length > 0)
+                {
+                    result.push({
+                        name: questions[i].name,
+                        index: i,
+                        subsections: fully_covered_subsections
+                    });
+                }
+            }
+            
+            return result;
         }
     };
     questionManger.initialize();
