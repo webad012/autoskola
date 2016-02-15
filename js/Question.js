@@ -38,6 +38,7 @@ var QuestionManager = function() {
             var code_split = code.split("_");
             var question = questions[code_split[0]].questions[code_split[1]].questions[code_split[2]];
             question.code = code;
+            shuffle(question.answers);
             return question;
         }
     };

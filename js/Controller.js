@@ -1,4 +1,4 @@
-/* global LocalStorage */
+/* global LocalStorage, ddtreemenu */
 
 var Controller = function () {
 
@@ -51,6 +51,8 @@ var Controller = function () {
             $("#tab-content").load("./views/about.html", function (data) {
                 window.scrollTo(0, 0);
                 $('#back_button').on('click', self.renderMainMenu);
+                
+                ddtreemenu.createTree("added_sections");
             });
         },
         

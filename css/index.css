@@ -219,3 +219,7 @@ button {
     display: inline-block;
     min-width: 172px;
 }
+
+#added_sections{
+    border: solid 1px #A7A7A7;
+}
