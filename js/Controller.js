@@ -248,7 +248,8 @@ var Controller = function () {
             }
             else
             {
-                $("#tab-content").load("./views/exam/result.html", function (data) {
+                $("#tab-content").load("./views/exam/result.html", function () {
+                    window.scrollTo(0, 0);
                     var text_message = 'Нисте положили';
                     if(quiz_result >= 85)
                     {
