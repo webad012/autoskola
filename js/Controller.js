@@ -147,7 +147,10 @@ var Controller = function () {
                 $('[type=checkbox]').checkboxradio().trigger('create');
                 $('#answers').controlgroup().trigger('create');
                 
-                $(".input-label").css("fontSize", "25px");
+                if($(window).width() >= 501)
+                {
+                    $(".input-label").css("fontSize", "25px");
+                }
                 
                 $('#mark_question_input').change(function() {
                     var position = self.marked_question_codes.indexOf(question_code);
@@ -244,7 +247,10 @@ var Controller = function () {
                     $('[type=checkbox]').checkboxradio().trigger('create');
                     $('#answers').controlgroup().trigger('create');
                     
-                    $(".input-label").css("fontSize", "25px");
+                    if($(window).width() >= 501)
+                    {
+                        $(".input-label").css("fontSize", "25px");
+                    }
 
                     $('input').on('change', function(){
                         if($(this).attr('type') === 'radio')
