@@ -113,6 +113,7 @@ var Controller = function () {
                 window.scrollTo(0, 0);
                 $('#back_button').on('click', self.renderMarkedQuestions);
                 
+                $('#question_code').text('Шифра: '+question.code);
                 var question_div = $("#question");
                 question_div.find('#text').text(question.text);
                 if (typeof question.image !== 'undefined' && question.image !== null)
