@@ -23,6 +23,14 @@ var QuestionManager = function() {
                 if($.inArray(question_key, taken_question_ids) === -1)
                 {
                     taken_question_ids.push(question_key);
+                    if(typeof question.similar_questions_ids !== 'undefined')
+                    {
+                        for(var j=0; j<question.similar_questions_ids.length; j++)
+                        {
+                            var similar_key = group.id+'_'+subgroup.id+'_'+question.similar_questions_ids[j];
+                            taken_question_ids.push(similar_key);
+                        }
+                    }
                     
                     shuffle(question.answers);
                     question.code = question_key;
@@ -31,8 +39,6 @@ var QuestionManager = function() {
                     i++;
                 }
             }
-//            questions[0].questions[1].questions[5].code = '0_1_5';
-//            result_questions.push(questions[0].questions[1].questions[5]);
 
             return result_questions;
         },

@@ -27,7 +27,8 @@ var questions = [
                                 text: 'униформисани комунални полицајци'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [2, 3, 4]
                     },
                     {
                         id: 2, 
@@ -53,7 +54,8 @@ var questions = [
                                 text: 'службеници надлежног органа за саобраћај'
                             }
                         ],
-                        correct_answers: [2,3]
+                        correct_answers: [2,3],
+                        similar_questions_ids: [1, 3, 4]
                     },
                     {
                         id: 3, 
@@ -82,7 +84,8 @@ var questions = [
                                 text: 'родитељи ученика'
                             }
                         ],
-                        correct_answers: [3,4]
+                        correct_answers: [3,4],
+                        similar_questions_ids: [1, 2, 4]
                     },
                     {
                         id: 4, 
@@ -90,7 +93,6 @@ var questions = [
                         text: 'На делу пута на коме се изводе радови '
                                 +'непосредно регулисање саобраћаја могу вршити:', 
                         image: null,
-                //            image: 'asd',
                         answers: [
                             {
                                 id: 1,
@@ -109,7 +111,8 @@ var questions = [
                                 text: 'униформисани полицијски службеници'
                             }
                         ],
-                        correct_answers: [2,4]
+                        correct_answers: [2,4],
+                        similar_questions_ids: [1, 2, 3]
                     },
                     {
                         id: 5, 
@@ -194,7 +197,8 @@ var questions = [
                                 text: 'формирање школских саобраћајних патрола и саобраћајних патрола грађана'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [9]
                     },
                     {
                         id: 9, 
@@ -214,7 +218,8 @@ var questions = [
                                 text: 'доношење програма саобраћајног васпитања и образовања деце у предшколским и школским установама'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8]
                     }
                 ]
             },
@@ -253,7 +258,8 @@ var questions = [
                                 text: 'Кретање возила површинама намењеним за кретање само возила и лица којима је власник те површине то омогућио'
                             }
                         ],
-                        correct_answers: [1, 3, 5]
+                        correct_answers: [1, 3, 5],
+                        similar_questions_ids: [2]
                     },
                     {
                         id: 2, 
@@ -285,7 +291,8 @@ var questions = [
                                 text: 'Кретање мотокултиватора земљаним путем'
                             }
                         ],
-                        correct_answers: [1, 3, 6]
+                        correct_answers: [1, 3, 6],
+                        similar_questions_ids: [1]
                     },
                     {
                         id: 3, 
@@ -337,7 +344,8 @@ var questions = [
                                 text: 'се креће по путу у дечјем превозном средству или у колицима за немоћна лица које покреће сопственом снагом или снагом мотора'
                             }
                         ],
-                        correct_answers: [3, 5, 6]
+                        correct_answers: [3, 5, 6],
+                        similar_questions_ids: [5, 6]
                     },
                     {
                         id: 5, 
@@ -361,7 +369,8 @@ var questions = [
                                 text: 'управља запрежним возилом по путу'
                             }
                         ],
-                        correct_answers: [2, 3]
+                        correct_answers: [2, 3],
+                        similar_questions_ids: [4, 6]
                     },
                     {
                         id: 6, 
@@ -386,7 +395,8 @@ var questions = [
                                 text: '4'
                             }
                         ],
-                        correct_answers: [1, 4]
+                        correct_answers: [1, 4],
+                        similar_questions_ids: [4, 5]
                     },
                     {
                         id: 7, 
@@ -438,7 +448,8 @@ var questions = [
                                 text: 'паркирање'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 9, 
@@ -458,7 +469,8 @@ var questions = [
                                 text: 'паркирање'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [8, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 10, 
@@ -475,7 +487,8 @@ var questions = [
                                 text: 'паркирано'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 11, 
@@ -499,7 +512,8 @@ var questions = [
                                 text: 'обилажење'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 12, 
@@ -525,7 +539,8 @@ var questions = [
                                 text: 'претицање'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 11, 13, 14, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 13, 
@@ -549,7 +564,8 @@ var questions = [
                                 text: 'обилажење'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 14, 
@@ -574,7 +590,8 @@ var questions = [
                                 text: 'пропуштање'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 15, 
@@ -598,7 +615,8 @@ var questions = [
                                 text: 'пропуштање'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 16, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 16, 
@@ -623,7 +641,8 @@ var questions = [
                                 text: 'обилажење'
                             }
                         ],
-                        correct_answers: [4]
+                        correct_answers: [4],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 20, 21, 23]
                     },
                     {
                         id: 17, 
@@ -648,7 +667,8 @@ var questions = [
                                 text: 'мимоилажење'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 23]
                     },
                     {
                         id: 18, 
@@ -689,7 +709,8 @@ var questions = [
                                 text: 'обилажење'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20, 21, 23]
                     },
                     {
                         id: 20, 
@@ -710,7 +731,8 @@ var questions = [
                                 text: 'мимоилажење'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 21, 23]
                     },
                     {
                         id: 21, 
@@ -738,7 +760,8 @@ var questions = [
                                 text: 'пропуштање'
                             }
                         ],
-                        correct_answers: [4]
+                        correct_answers: [4],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 23]
                     },
                     {
                         id: 22, 
@@ -783,7 +806,8 @@ var questions = [
                                 text: 'обилажење'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21]
                     },
                     {
                         id: 24, 
@@ -807,7 +831,8 @@ var questions = [
                                 text: 'низ од најмање два возила'
                             }
                         ],
-                        correct_answers: [2, 3]
+                        correct_answers: [2, 3],
+                        similar_questions_ids: [25, 26, 27]
                     },
                     {
                         id: 25, 
@@ -839,7 +864,8 @@ var questions = [
                                 text: 'возила су паркирана у истој саобраћајној траци'
                             }
                         ],
-                        correct_answers: [2, 4, 5]
+                        correct_answers: [2, 4, 5],
+                        similar_questions_ids: [24, 26, 27]
                     },
                     {
                         id: 26, 
@@ -856,7 +882,8 @@ var questions = [
                                 text: 'су колона возила'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [24, 25, 27]
                     },
                     {
                         id: 27, 
@@ -873,7 +900,8 @@ var questions = [
                                 text: 'нису колона возила'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [24, 25, 26]
                     },
                     {
                         id: 28, 
@@ -961,7 +989,8 @@ var questions = [
                                 text: 'је саобраћајна незгода јер је начињена материјална штета'
                             }
                         ],
-                        correct_answers: [4]
+                        correct_answers: [4],
+                        similar_questions_ids: [32]
                     },
                     {
                         id: 32, 
@@ -985,7 +1014,8 @@ var questions = [
                                 text: 'је саобраћајна незгода јер је повређен возач и начињена материјална штета'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [31]
                     },
                     {
                         id: 33, 
@@ -1006,7 +1036,8 @@ var questions = [
                                 text: 'предњи, односно задњи препуст возила'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [34, 36, 37]
                     },
                     {
                         id: 34, 
@@ -1031,7 +1062,8 @@ var questions = [
                                 text: '2'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [33]
                     },
                     {
                         id: 35, 
@@ -1076,7 +1108,8 @@ var questions = [
                                 text: 'растојање'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [34, 35, 37]
                     },
                     {
                         id: 37, 
@@ -1101,7 +1134,8 @@ var questions = [
                                 text: '4'
                             }
                         ],
-                        correct_answers: [2]
+                        correct_answers: [2],
+                        similar_questions_ids: [34, 35, 36]
                     },
                     {
                         id: 38, 
@@ -1193,7 +1227,8 @@ var questions = [
                                 text: 'највећа дозвољена укупна маса возила'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [42, 43, 44, 45, 46]
                     },
                     {
                         id: 42, 
@@ -1217,7 +1252,8 @@ var questions = [
                                 text: 'највећа дозвољена маса возила'
                             }
                         ],
-                        correct_answers: [4]
+                        correct_answers: [4],
+                        similar_questions_ids: [41, 43, 44, 45, 46]
                     },
                     {
                         id: 43, 
@@ -1241,7 +1277,8 @@ var questions = [
                                 text: 'највећа дозвољена укупна маса возила'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [41, 42, 44, 45, 46]
                     },
                     {
                         id: 44, 
@@ -1265,7 +1302,8 @@ var questions = [
                                 text: 'осовинско оптерећење скупа возила'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [41, 42, 43, 45, 46]
                     },
                     {
                         id: 45, 
@@ -1289,7 +1327,8 @@ var questions = [
                                 text: 'највећа дозвољена маса скупа возила'
                             }
                         ],
-                        correct_answers: [1]
+                        correct_answers: [1],
+                        similar_questions_ids: [41, 42, 43, 44, 46]
                     },
                     {
                         id: 46, 
@@ -1313,7 +1352,8 @@ var questions = [
                                 text: 'највећа дозвољена маса возил'
                             }
                         ],
-                        correct_answers: [3]
+                        correct_answers: [3],
+                        similar_questions_ids: [41, 42, 43, 44, 45]
                     },
                     {
                         id: 47, 
