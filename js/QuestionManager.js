@@ -39,6 +39,8 @@ var QuestionManager = function() {
                     i++;
                 }
             }
+            
+//            console.log(taken_question_ids);
 
             return result_questions;
         },
