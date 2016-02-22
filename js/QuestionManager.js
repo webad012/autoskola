@@ -42,18 +42,18 @@ var QuestionManager = function() {
             for(var i=0; i<questions.length; i++)
             {
                 var group = questions[i];
-                if(group.id === code_split[0])
+                if(parseInt(group.id) === parseInt(code_split[0]))
                 {
-                    for(var j=0; j<group.questions; j++)
+                    for(var j=0; j<group.questions.length; j++)
                     {
                         var subgroup = group.questions[j];
-                        if(subgroup.id === code_split[1])
+                        if(parseInt(subgroup.id) === parseInt(code_split[1]))
                         {
-                            var questions = subgroup.questions;
-                            for(var n=0; n<questions.length; n++)
+                            var subgroup_questions = subgroup.questions;
+                            for(var n=0; n<subgroup_questions.length; n++)
                             {
-                                var question = questions[n];
-                                if(question.id === code_split[2])
+                                var question = subgroup_questions[n];
+                                if(parseInt(question.id) === parseInt(code_split[2]))
                                 {
                                     question.code = code;
                                     shuffle(question.answers);
