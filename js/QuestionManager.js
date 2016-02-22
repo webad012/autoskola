@@ -14,17 +14,20 @@ var QuestionManager = function() {
             for(var i=0; i<number_of_questions;)
             {
                 var group_index = Math.floor((Math.random() * questions.length));
-                var sub_group_index = Math.floor((Math.random() * questions[group_index].questions.length));
-                var question_index = Math.floor((Math.random() * questions[group_index].questions[sub_group_index].questions.length));
-                var question_key = group_index+'_'+sub_group_index+'_'+question_index;
+                var group = questions[group_index];
+                var sub_group_index = Math.floor((Math.random() * group.questions.length));
+                var subgroup = group.questions[sub_group_index];
+                var question_index = Math.floor((Math.random() * subgroup.questions.length));
+                var question = questions[group_index].questions[sub_group_index].questions[question_index];
+                var question_key = group.id+'_'+subgroup.id+'_'+question.id;
                 if($.inArray(question_key, taken_question_ids) === -1)
                 {
                     taken_question_ids.push(question_key);
                     
-                    shuffle(questions[group_index].questions[sub_group_index].questions[question_index].answers);
+                    shuffle(question.answers);
+                    question.code = question_key;
                     
-                    questions[group_index].questions[sub_group_index].questions[question_index].code = question_key;
-                    result_questions.push(questions[group_index].questions[sub_group_index].questions[question_index]);
+                    result_questions.push(question);
                     i++;
                 }
             }
@@ -36,10 +39,36 @@ var QuestionManager = function() {
         getQuestionByCode: function(code)
         {
             var code_split = code.split("_");
-            var question = questions[code_split[0]].questions[code_split[1]].questions[code_split[2]];
-            question.code = code;
-            shuffle(question.answers);
-            return question;
+            for(var i=0; i<questions.length; i++)
+            {
+                var group = questions[i];
+                if(group.id === code_split[0])
+                {
+                    for(var j=0; j<group.questions; j++)
+                    {
+                        var subgroup = group.questions[j];
+                        if(subgroup.id === code_split[1])
+                        {
+                            var questions = subgroup.questions;
+                            for(var n=0; n<questions.length; n++)
+                            {
+                                var question = questions[n];
+                                if(question.id === code_split[2])
+                                {
+                                    question.code = code;
+                                    shuffle(question.answers);
+                                    return question;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return null;
+//            var question = questions[code_split[0]].questions[code_split[1]].questions[code_split[2]];
+//            question.code = code;
+//            shuffle(question.answers);
+//            return question;
         },
         getFullyCoveredSections: function()
         {
@@ -47,19 +76,10 @@ var QuestionManager = function() {
             
             for(var i=0; i<questions.length; i++)
             {
-//                var section = questions[i];
                 var fully_covered_subsections = [];
-                
-//                console.log('getFullyCoveredSections - 0 - '+section.length);
-//                console.log('getFullyCoveredSections - 0 - '+questions[i]);
-//                console.log('getFullyCoveredSections - 0 - '+questions[i].name);
-//                console.log('getFullyCoveredSections - 0 - '+questions[i].length);
                 
                 for(var j=0; j<questions[i].questions.length; j++)
                 {
-//                    var subsection = questions[i][j];
-//                    console.log('getFullyCoveredSections - 1 - '+questions[i].questions[j].questions.length);
-//                    console.log('getFullyCoveredSections - 2 - '+questions[i].questions[j].total_number_of_questions);
                     if(questions[i].questions[j].questions.length === questions[i].questions[j].total_number_of_questions)
                     {
                         fully_covered_subsections.push({
@@ -68,9 +88,7 @@ var QuestionManager = function() {
                         });
                     }
                 }
-                
-//                console.log(fully_covered_subsections);
-                
+                                
                 if(fully_covered_subsections.length > 0)
                 {
                     result.push({
