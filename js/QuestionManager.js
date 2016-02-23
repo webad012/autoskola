@@ -22,6 +22,10 @@ var QuestionManager = function() {
                 var question_key = group.id+'_'+subgroup.id+'_'+question.id;
                 if($.inArray(question_key, taken_question_ids) === -1)
                 {
+//                    if(group.id === 6 && subgroup.id===3)
+//                    {
+//                        console.log('yes');
+//                    }
                     taken_question_ids.push(question_key);
                     if(typeof question.similar_questions_ids !== 'undefined')
                     {
