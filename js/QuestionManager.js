@@ -22,7 +22,7 @@ var QuestionManager = function() {
                 var question_key = group.id+'_'+subgroup.id+'_'+question.id;
                 if($.inArray(question_key, taken_question_ids) === -1)
                 {
-//                    if(group.id === 7 && subgroup.id === 0)
+//                    if(group.id === 4 && subgroup.id === 15)
 //                    {
 //                        console.log('yes');
 //                    }
