@@ -2,7 +2,7 @@ var questions = questions || [];
 
 questions.push({
     id: 6,
-    name: 'Превоз терета и лица возилима',
+    name: 'Превоз терета и лица возилима', /// 5+18+4+10
     questions: [
         {
             id: 0,
