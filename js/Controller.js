@@ -113,7 +113,7 @@ var Controller = function () {
                 window.scrollTo(0, 0);
                 $('#back_button').on('click', self.renderMarkedQuestions);
                 
-                $('#question_code').text('Шифра: '+question.code);
+                $('#question_code').text('Шифра: '+question_code);
                 var question_div = $("#question");
                 question_div.find('#text').text(question.text);
                 if (typeof question.image !== 'undefined' && question.image !== null)
@@ -373,6 +373,8 @@ var Controller = function () {
         onMarkQuestionInputChange: function()
         {
             var question_code = quiz_questions[quiz_progress].code;
+//            var question_code = $('#question_code');
+//            console.log($('#question_code').text());
             var position = self.marked_question_codes.indexOf(question_code);
             
             if($('#mark_question_input').is(":checked")) 
