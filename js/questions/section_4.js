@@ -11494,48 +11494,6 @@ questions.push({
                     ],
                     correct_answers: [3]
                 }
-//                {
-//                    id: 1, 
-//                    points: 2,
-//                    text: ':', 
-//                    image: './img/slika.jpg',
-//                    answers: [
-//                        {
-//                            id: 1,
-//                            text: ''
-//                        },
-//                        {
-//                            id: 2,
-//                            text: ''
-//                        },
-//                        {
-//                            id: 3,
-//                            text: ''
-//                        }
-//                    ],
-//                    correct_answers: []
-//                },
-//                {
-//                    id: 1, 
-//                    points: 2,
-//                    text: ':', 
-//                    image: './img/slika.jpg',
-//                    answers: [
-//                        {
-//                            id: 1,
-//                            text: ''
-//                        },
-//                        {
-//                            id: 2,
-//                            text: ''
-//                        },
-//                        {
-//                            id: 3,
-//                            text: ''
-//                        }
-//                    ],
-//                    correct_answers: []
-//                }
             ]
         },
         {
