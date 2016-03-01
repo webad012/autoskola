@@ -43,6 +43,18 @@ var Controller = function () {
             });
         },
         
+        renderVersionCheckingResult: function(message_html)
+        {
+            var $tab = $('#tab-content');
+            $tab.empty();
+            
+            $("#tab-content").load("./views/version_checking_result.html", function (data) {
+                $('#back_button').on('click', self.renderAbout);
+                
+                $('#message').html(message_html);
+            });
+        },
+        
         renderAbout: function()
         {
             var $tab = $('#tab-content');
@@ -51,6 +63,29 @@ var Controller = function () {
             $("#tab-content").load("./views/about.html", function (data) {
                 window.scrollTo(0, 0);
                 $('#back_button').on('click', self.renderMainMenu);
+                $('#version_num').text('v'+AutoskolaConf.version);
+                $('#verify_version_button').on('click', function(){
+                    var api_url = AutoskolaConf.apiUrl+"?action=ValidateVersion&AppVersion="+AutoskolaConf.version;
+                    $.ajax({
+                        url: api_url,
+                        dataType: 'jsonp',
+                        jsonp: 'callback',
+                        async: true,
+                        success: function(response){
+                            if(response.status === 'success')
+                            {
+                                self.renderVersionCheckingResult(response.html);
+                            }
+                            else
+                            {
+                                self.renderVersionCheckingResult('Дошло је до грешке');
+                            }
+                        },
+                        error: function(xhr){
+                            self.renderVersionCheckingResult('Дошло је до грешке');
+                        }
+                    });
+                });
                 
                 var fully_covered_sections = questionManager.getFullyCoveredSections();
                 var added_sections_main_ul = $('#added_sections_main_ul');
